@@ -5,6 +5,7 @@ npx create-expo-app fire1 -t expo-template-blank-typescript
 npx expo install firebase
 
 touch firebase.config.js
+- add code
 
 npx expo customize metro.config.js
 - add code 
@@ -12,6 +13,8 @@ npx expo customize metro.config.js
 ```javascript
 config.resolver.sourceExts.push('cjs');
 ```
+
+npx expo install expo-constants
 
 touch .env
 - add your firebase config
