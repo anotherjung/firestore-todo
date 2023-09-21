@@ -74,7 +74,7 @@ const App = () => {
           onChangeText={(text) => setTodo(text)}
           value={todo}
         />
-        <Button style={styles.add} onPress={addTodo} title="Add" disabled={todo === ''} />
+        <Button onPress={addTodo} title="Add" disabled={todo === ''} />
       </View>
       {todos.length ? (
         <View><Text>Count {todos.length}</Text>
