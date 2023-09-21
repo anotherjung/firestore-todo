@@ -31,7 +31,7 @@ const App = () => {
       }
     });
   
-    // // Unsubscribe from events when no longer in use
+    // // Unsubscribe from events
     return () => subscriber();
   }, []);
  
@@ -70,11 +70,11 @@ const App = () => {
       <View style={styles.form}>
         <TextInput
           style={styles.input}
-          placeholder="Add new todo"
+          placeholder="Add todo"
           onChangeText={(text) => setTodo(text)}
           value={todo}
         />
-        <Button onPress={addTodo} title="Add Todo" disabled={todo === ''} />
+        <Button style={styles.add} onPress={addTodo} title="Add" disabled={todo === ''} />
       </View>
       {todos.length ? (
         <View><Text>Count {todos.length}</Text>
@@ -82,7 +82,6 @@ const App = () => {
             data={todos}
             renderItem={renderTodo}
             keyExtractor={(todo) => todo.id}
-            // removeClippedSubviews={true}
           />
         </View>
       ):null}
